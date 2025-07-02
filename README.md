@@ -1,71 +1,46 @@
-# Getting Started with Create React App
+# 🪺 CodeNest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O **CodeNest** é uma aplicação web desenvolvida com React que permite armazenar, testar e reutilizar snippets de código com explicações e organização por tags. Ideal para quem estuda programação, cria projetos ou quer manter seu repositório pessoal de conhecimento técnico.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Funcionalidades
 
-### `npm start`
+- 📚 Cadastro de snippets com título, descrição, código e tags
+- 🎯 Execução de código JavaScript diretamente no navegador
+- 🌙 Suporte a tema escuro (Dark Mode)
+- 🌐 Internacionalização com `react-i18next`
+- 🔍 Filtro e busca de snippets por palavras-chave
+- 🧩 Destaque de sintaxe com `react-syntax-highlighter`
+- 💬 Chatbot com IBM Watson integrado
+- 📦 Organização de snippets por categoria
+- ✅ Responsivo e com design moderno
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tecnologias
 
-### `npm test`
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [styled-components](https://styled-components.com/)
+- [react-i18next](https://react.i18next.com/)
+- [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
+- [Sentry](https://sentry.io/) – monitoramento de erros
+- [IBM Watson Assistant](https://www.ibm.com/cloud/watson-assistant) – chatbot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📷 Preview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Preview do CodeNest](./public/demo.gif)  
+*Interface limpa, com modo escuro e destaque de código.*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Instalação
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# codeNest" 
+```bash
+git clone https://github.com/seu-usuario/codenest.git
+cd codenest
+npm install
+npm start

@@ -1,0 +1,26 @@
+{
+    "home_button_dark_mode": "Modo Oscuro",
+    "dark_mode_title": "Modo Oscuro",
+    "see_step_by_step": "Paso a paso:",
+    "dark_mode_text_explain_concept": "El Modo Oscuro es una opción de tema oscuro para interfaces que reduce el brillo de la pantalla, mejora la legibilidad en entornos con poca luz y disminuye la fatiga visual. Además, le da un toque moderno al aspecto de la aplicación.",
+    "dark_mode_text_explain_create": "Para aplicar el Modo Oscuro con styled-components, se crean dos temas (claro y oscuro) y se alterna entre ellos utilizando el ThemeProvider. Los colores se acceden directamente en los componentes mediante las props del tema.\nEl modo oscuro se puede activar manualmente (con un botón) y su estado puede guardarse en localStorage para mantener la configuración entre sesiones.",
+    "dark_mode_step_1": "1. Define los temas claro y oscuro",
+    "dark_mode_step_2": "2. Crea el GlobalStyle con styled-components",
+    "dark_mode_step_3": "3. Envuelve tu aplicación con ThemeProvider",
+    "dark_mode_step_4": "4. Controla el tema con useState y localStorage",
+    "dark_mode_step_5": "5. Crea el botón para cambiar el tema",
+
+    "home_button_translate": "Internacionalización (i18n)",
+    "translation_title":"Internacionalización (i18n)",
+    "translation_text_explain_concept": "La internacionalización (o i18n) es el proceso de preparar una aplicación para soportar múltiples idiomas, permitiendo que el contenido se traduzca dinámicamente según la preferencia del usuario.",
+    "translation_text_explain_create": "Para aplicar la internacionalización con react-i18next, se crean archivos de traducción separados por idioma y se configura i18n para registrar estos recursos. Los textos de la interfaz se acceden mediante claves utilizando la función t(), que devuelve la traducción según el idioma actual. El cambio de idioma se puede hacer manualmente (con un botón o selector), y la elección del usuario puede guardarse en localStorage para mantenerse entre sesiones.",
+    "translation_step_1": "1. Instala las dependencias",
+    "translation_step_2": "2. Crea los archivos de traducción",
+    "translation_step_3": "3. Configura i18n",
+    "translation_step_4": "4. Importa i18n al inicio de la aplicación",
+    "translation_step_5": "5. Usa el hook useTranslation",
+    "translation_step_6": "6. Cambia el idioma dinámicamente",
+
+    "home_button_sentry":"Sentry"
+    
+}

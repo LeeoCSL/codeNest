@@ -1,0 +1,25 @@
+{
+    "home_button_dark_mode": "Dark Mode",
+    "dark_mode_title": "Dark Mode",
+    "see_step_by_step": "Step-by-step:",
+    "dark_mode_text_explain_concept": "Dark Mode is a dark theme option for interfaces that reduces screen brightness, improves readability in low-light environments, and decreases eye strain. Additionally, it gives the application a modern visual touch.",
+    "dark_mode_text_explain_create": "To apply Dark Mode with styled-components, we create two themes (light and dark) and switch between them using the ThemeProvider. Colors are accessed directly in the components via theme props.\nDark mode can be manually activated (with a button), and the state can be saved in localStorage to persist between sessions.",
+    "dark_mode_step_1": "1. Define the light and dark themes",
+    "dark_mode_step_2": "2. Create the GlobalStyle with styled-components",
+    "dark_mode_step_3": "3. Wrap your application with ThemeProvider",
+    "dark_mode_step_4": "4. Control the theme with useState and localStorage",
+    "dark_mode_step_5": "5. Create the theme toggle button",
+
+    "home_button_translate": "Internationalization (i18n)",
+    "translation_title":"Internationalization (i18n)",
+    "translation_text_explain_concept": "Internationalization (or i18n) is the process of preparing an application to support multiple languages, allowing content to be translated dynamically according to the user's preference.",
+    "translation_text_explain_create": "To apply internationalization with react-i18next, we create separate translation files for each language and configure i18n to register these resources. Interface texts are accessed through keys using the t() function, which returns the translation based on the current language. Language switching can be done manually (with a button or selector), and the user's choice can be saved in localStorage to persist between sessions.",
+    "translation_step_1": "1. Install the dependencies",
+    "translation_step_2": "2. Create the translation files",
+    "translation_step_3": "3. Configure i18n",
+    "translation_step_4": "4. Import i18n at the start of the application",
+    "translation_step_5": "5. Use the useTranslation hook",
+    "translation_step_6": "6. Change the language dynamically",
+
+    "home_button_sentry":"Sentry"
+}

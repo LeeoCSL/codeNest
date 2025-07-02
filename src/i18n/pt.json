@@ -1,0 +1,47 @@
+{
+    "see_step_by_step": "Passo-a-passo:",
+
+    "home_button_dark_mode": "Modo Escuro",
+    "dark_mode_title": "Modo Escuro",
+    "dark_mode_text_explain_concept": "O Dark Mode é uma opção de tema escuro para interfaces, que reduz o brilho da tela, melhora a legibilidade em ambientes com pouca luz e diminui o cansaço visual. Além disso, dá um toque moderno ao visual da aplicação.",
+    "dark_mode_text_explain_create": "Para aplicar o Dark Mode com styled-components, criamos dois temas (claro e escuro) e alternamos entre eles usando o ThemeProvider. As cores são acessadas diretamente nos componentes via props do tema.\n O modo escuro pode ser ativado manualmente (com um botão) e o estado pode ser salvo no localStorage para persistência entre sessões.",
+    "dark_mode_step_1": "1. Defina os temas claro e escuro",
+    "dark_mode_step_2": "2. Crie o GlobalStyle com styled-components",
+    "dark_mode_step_3": "3. Envolva sua aplicação com ThemeProvider",
+    "dark_mode_step_4": "4. Controle o tema com useState e localStorage",
+    "dark_mode_step_5": "5. Crie o botão de troca de tema",
+
+    "home_button_translate": "Internacionalização (i18n)",
+    "translation_title":"Internacionalização (i18n)",
+    "translation_text_explain_concept": "Internacionalização (ou i18n) é o processo de preparar uma aplicação para suportar múltiplos idiomas, permitindo que o conteúdo seja traduzido dinamicamente de acordo com a preferência do usuário.",
+    "translation_text_explain_create": "Para aplicar internacionalização com react-i18next, criamos arquivos de tradução separados por idioma e configuramos o i18n para registrar esses recursos. Os textos da interface são acessados por meio de chaves com a função t(), que retorna a tradução conforme o idioma atual. A troca de idioma pode ser feita manualmente (com um botão ou seletor), e a escolha do usuário pode ser salva no localStorage para persistência entre sessões.",
+    "translation_step_1": "1. Instale as dependências",
+    "translation_step_2": "2. Crie os arquivos de tradução",
+    "translation_step_3": "3. Configure o i18n",
+    "translation_step_4": "4. Importe o i18n no início da aplicação",
+    "translation_step_5": "5. Use o hook useTranslation",
+    "translation_step_6": "6. Altere o idioma dinamicamente",
+
+    "home_button_sentry":"Sentry",
+    "sentry_title": "Sentry",
+    "sentry_text_explain_concept": "O Sentry é uma ferramenta de monitoramento de erros em tempo real, que permite identificar falhas na aplicação de forma rápida e eficiente. Ele registra detalhes sobre os erros, como o local em que ocorreram e o que os causou, ajudando os desenvolvedores a corrigir problemas com mais agilidade.",
+    "sentry_text_explain_create": "Para implementar o Sentry em uma aplicação React, é necessário instalar as bibliotecas @sentry/react e @sentry/tracing, e configurar o monitoramento no ponto de entrada da aplicação utilizando a função Sentry.init(). O DSN fornecido pelo painel do Sentry conecta a aplicação ao projeto de monitoramento. Também é possível envolver os componentes com ErrorBoundary para capturar erros de interface. Assim, falhas são registradas automaticamente, permitindo uma análise detalhada e correções mais rápidas.",
+    "sentry_step_1": "1. Crie uma conta e inicie um projeto em https://sentry.io",
+    "sentry_step_2": "2. Instale a dependência",
+    "sentry_step_3": "3. Inicialize o Sentry (logo no inicio da aplicação, como no index.js",
+    "sentry_step_4": "4. Teste forçando um erro (em qualquer lugar do código que preferir)",
+    "sentry_step_5": "5. Print do dashboard do Sentry",
+
+    "home_button_snippets": "Snippets \n(react-syntax-highlighter)",
+    "snippets_title": "Snippets \n(react-syntax-highlighter)",
+    "snippets_text_explain_concept":"O react-syntax-highlighter é uma biblioteca que permite exibir trechos de código com realce de sintaxe (syntax highlight) diretamente em aplicações React. Ele suporta diversas linguagens e temas visuais, facilitando a leitura e o entendimento do código. É ideal para aplicações com foco em documentação, ensino ou compartilhamento de snippets de forma organizada e estilizada.",
+    "snippets_text_explain_create":"Para implementar o react-syntax-highlighter, basta instalar a biblioteca e importar o componente desejado com o tema e a linguagem de destaque. O código é passado como conteúdo dentro do componente, e o visual é customizado com base no tema escolhido. Também é possível aplicar estilos personalizados ou trocar o tema dinamicamente, conforme a interface da aplicação.",
+    "snippets_step_1": "1. Instalação da biblioteca",
+    "snippets_step_2": "2. Importação do componente e tema",
+    "snippets_step_3": "3. Exibindo o código",
+    "snippets_step_4": " 4. Opções adicionais (opcional)"
+    
+
+
+
+}
