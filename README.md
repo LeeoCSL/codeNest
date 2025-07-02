@@ -1,6 +1,6 @@
 # 🪺 CodeNest
 
-O **CodeNest** é uma aplicação web desenvolvida com React que permite armazenar, testar e reutilizar snippets de código com explicações e organização por tags. Ideal para quem estuda programação, cria projetos ou quer manter seu repositório pessoal de conhecimento técnico.
+O **CodeNest** é uma aplicação web desenvolvida com React que permite armazenar, consultar e reutilizar snippets de código com explicações passo-a-passo. Ideal para quem estuda programação, cria projetos ou quer manter ter um local para consultar diversas funcionalidades.
 
 ---
 
