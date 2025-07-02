@@ -30,10 +30,10 @@ O **CodeNest** é uma aplicação web desenvolvida com React que permite armazen
 
 ---
 
-## 📷 Preview
+<!-- ## 📦 Instalação
 
 ![Preview do CodeNest](./public/demo.gif)  
-*Interface limpa, com modo escuro e destaque de código.*
+*Interface limpa, com modo escuro e destaque de código.* -->
 
 ---
 
@@ -44,3 +44,15 @@ git clone https://github.com/seu-usuario/codenest.git
 cd codenest
 npm install
 npm start
+```
+
+---
+
+## 👨‍💻 Autor
+
+**Leonardo Ribeiro**  
+Desenvolvedor Front-End (React & React Native)  
+📍 São Paulo/SP  
+📧 leonardoribeirocsl@gmail.com  
+📱 (11) 97389-7773  
+🔗 [linkedin.com/in/leonardo-ribeiro](https://www.linkedin.com/in/leonardo-ribeiro/)
