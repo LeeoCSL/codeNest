@@ -6,15 +6,12 @@ O **CodeNest** é uma aplicação web desenvolvida com React que permite armazen
 
 ## 🚀 Funcionalidades
 
-- 📚 Cadastro de snippets com título, descrição, código e tags
-- 🎯 Execução de código JavaScript diretamente no navegador
+- 🧾 Consulta de snippets de código organizados por assunto
 - 🌙 Suporte a tema escuro (Dark Mode)
-- 🌐 Internacionalização com `react-i18next`
-- 🔍 Filtro e busca de snippets por palavras-chave
-- 🧩 Destaque de sintaxe com `react-syntax-highlighter`
-- 💬 Chatbot com IBM Watson integrado
-- 📦 Organização de snippets por categoria
-- ✅ Responsivo e com design moderno
+- 🌐 Suporte a múltiplos idiomas com `react-i18next`
+- 🧠 Chatbot integrado com IBM Watson Assistant
+- 🛡️ Monitoramento de erros com Sentry
+- 🎨 Exibição de código com realce de sintaxe (`react-syntax-highlighter`)
 
 ---
 
