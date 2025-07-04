@@ -27,6 +27,7 @@ import { ConfigProvider, theme } from 'antd';
 
 import {getAntTheme} from './utils/antTheme';
 
+import { HashRouter as Router } from 'react-router-dom';
 
 
 function App() {
@@ -50,7 +51,7 @@ setViewMode(mode)
     theme={getAntTheme(viewMode) }
   >
      <ThemeProvider theme={viewMode == 'dark' ? darkTheme : lightTheme}>
-       <BrowserRouter>
+       <Router>
       <GlobalStyle />
        {/* <Sidebar /> */}
       <Header toggleTheme={handleChangeMode} viewMode={viewMode} />
@@ -59,7 +60,7 @@ setViewMode(mode)
          
       {/* <Home /> */}
        
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
 
   </ConfigProvider>
