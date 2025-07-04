@@ -3,28 +3,28 @@ name: Deploy React to GitHub Pages
 on:
   push:
     branches:
-      - main  # sempre que der push na main, roda o deploy
+      - main  # Sempre que der push na main, faz deploy
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Configura Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Instala dependências
         run: npm ci
 
-      - name: Build project
+      - name: Build do projeto
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Faz deploy no GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
