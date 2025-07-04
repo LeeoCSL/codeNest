@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
-
+import { Card } from 'antd';
 export const Container = styled.div`
   display: flex;                  
   ${'' /* Define que os filhos do container serão organizados com flexbox */}
@@ -73,5 +73,25 @@ export const GridButton = styled(Link)`
 
   &:hover {
     transform: scale(1.03);
+  }
+`;
+
+export const StyledCard = styled(Card)`
+  background: ${({ theme }) => theme.primary || '#444'};
+  color: #fff;
+  border: 1px solid #303050;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+ padding: 16px;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    background: #272740;
+  }
+
+  .ant-card-body {
+    padding: 16px;
   }
 `;

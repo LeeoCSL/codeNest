@@ -11,6 +11,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   border-bottom: 1px solid ${({ theme }) => theme.text + '33'}; /* com opacidade */
   position: fixed;
+  z-index: 1001;
 `;
 
 export const Title = styled.h1`

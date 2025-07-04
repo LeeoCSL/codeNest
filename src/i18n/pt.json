@@ -22,6 +22,7 @@
     "translation_step_5": "5. Use o hook useTranslation",
     "translation_step_6": "6. Altere o idioma dinamicamente",
 
+
     "home_button_sentry":"Sentry",
     "sentry_title": "Sentry",
     "sentry_text_explain_concept": "O Sentry é uma ferramenta de monitoramento de erros em tempo real, que permite identificar falhas na aplicação de forma rápida e eficiente. Ele registra detalhes sobre os erros, como o local em que ocorreram e o que os causou, ajudando os desenvolvedores a corrigir problemas com mais agilidade.",
@@ -39,9 +40,60 @@
     "snippets_step_1": "1. Instalação da biblioteca",
     "snippets_step_2": "2. Importação do componente e tema",
     "snippets_step_3": "3. Exibindo o código",
-    "snippets_step_4": " 4. Opções adicionais (opcional)"
-    
+    "snippets_step_4": " 4. Opções adicionais (opcional)",
 
+    "home_button_fields_examples": "lista de componentes",
+    "fields_examples_title": "Lista de componentes",
+
+    "home_button_status_code": "Status Codes HTTP",
+    "status_code_title": "Status Codes HTTP",
+    "status_code_subtitle": "Referência rápida dos principais códigos de resposta HTTP",
+
+    "status_code_1xx": "▶️ 1xx - Informativos",
+    "status_code_title_100": "100 Continue",
+    "status_code_text_100": "O servidor recebeu o início da solicitação, continue enviando o resto.",
+    "status_code_title_101": "101 Switching Protocols",
+    "status_code_text_101": "O servidor aceitou mudar de protocolo.", 
+
+    "status_code_2xx": "✅ 2xx - Sucesso",
+    "status_code_title_200": "200 OK",
+    "status_code_text_200": "Requisição bem-sucedida.",
+    "status_code_title_201": "201 Created",
+    "status_code_text_201": "Recurso criado com sucesso.",
+    "status_code_title_204": "204 No Content",
+    "status_code_text_204": "Requisição bem-sucedida, mas sem conteúdo no corpo da resposta.",
+
+    "status_code_3xx": "🔀 3xx - Redirecionamento",
+    "status_code_title_301": "301 Moved Permanently",
+    "status_code_text_301": "Recurso movido de forma permanente.",
+    "status_code_title_302": "302 Found",
+    "status_code_text_302": "Redirecionamento temporário.",
+    "status_code_title_304": "304 Not Modified",
+    "status_code_text_304": "Recurso não foi modificado desde a última requisição.",
+
+    "status_code_4xx": "⚠️ 4xx - Erros do cliente",
+    "status_code_title_400": "400 Bad Request",
+    "status_code_text_400": "A requisição está malformada.",
+    "status_code_title_401": "401 Unauthorized",
+    "status_code_text_401": "Falta de autenticação.",
+    "status_code_title_403": "403 Forbidden",
+    "status_code_text_403": "Autenticado, mas sem permissão.",
+    "status_code_title_404": "404 Not Found",
+    "status_code_text_404": "Recurso não encontrado.",
+    "status_code_title_429": "429 Too Many Requests",
+    "status_code_text_429": "Limite de requisições excedido.",
+
+    
+    "status_code_5xx": "❌ 5xx - Erros do servidor",
+    "status_code_title_500": "500 Internal Server Error",
+    "status_code_text_500": "Erro inesperado no servidor.",
+    "status_code_title_502": "502 Bad Gateway",
+    "status_code_text_502": "Gateway/proxy recebeu resposta inválida.",
+    "status_code_title_503": "503 Service Unavailable",
+    "status_code_text_503": "Servidor temporariamente indisponível.",
+
+
+    "home_button_ant_design": "Ant Design"
 
 
 }

@@ -23,6 +23,12 @@ import Sidebar from './components/Sidebar'
 
 import ChatBot from './components/ChatBot'
 
+import { ConfigProvider, theme } from 'antd';
+
+import {getAntTheme} from './utils/antTheme';
+
+
+
 function App() {
   const [viewMode, setViewMode] = useState('dark');
 
@@ -40,6 +46,9 @@ setViewMode(mode)
   // const toggleTheme = () => setIsDarkMode(prev => !prev);
 
   return (
+    <ConfigProvider
+    theme={getAntTheme(viewMode) }
+  >
      <ThemeProvider theme={viewMode == 'dark' ? darkTheme : lightTheme}>
        <BrowserRouter>
       <GlobalStyle />
@@ -52,6 +61,8 @@ setViewMode(mode)
        
       </BrowserRouter>
     </ThemeProvider>
+
+  </ConfigProvider>
   );
 }
 

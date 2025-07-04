@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './i18n';
 import * as Sentry from "@sentry/react";
 
-import './i18n';
+import 'antd/dist/reset.css';
 
 Sentry.init({
   dsn: "https://7af2cb20fa8ccd19c952aa7861fc7137@o305074.ingest.us.sentry.io/4509597071441920",

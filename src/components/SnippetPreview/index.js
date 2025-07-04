@@ -1,35 +1,44 @@
+import { Card, Typography } from 'antd';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  width: 100%;
-  background: ${({ theme }) => theme.background};
-  border: 1px solid ${({ theme }) => theme.text}33;
-  border-radius: 8px;
-  overflow-x: auto;
-  padding: 16px;
-  margin-top: 16px;
-`;
-
-const Title = styled.h3`
-  margin-bottom: 12px;
-  color: ${({ theme }) => theme.text};
-`;
+import { useTheme } from 'styled-components';
+const { Title } = Typography;
 
 export default function SnippetPreview({ code, language = 'jsx', title }) {
   return (
-    <Wrapper>
-      {title && <Title>{title}</Title>}
-      <SyntaxHighlighter 
-      language={language} 
-      style={dracula} 
-      wrapLines 
-      wrapLongLines
-      showLineNumbers={true}
-      customStyle={{ borderRadius: '8px', padding: '16px' }}>
-        {code}
-      </SyntaxHighlighter>
-    </Wrapper>
+    <Card
+      style={{
+        background: '#1e1e2f',
+        borderRadius: 12,
+        overflowX: 'auto',
+        marginTop: 16,
+      }}
+      bodyStyle={{
+        padding: 16,
+      }}
+    >
+      {title && (
+        <Title level={5} style={{ color: '#fff', marginBottom: 16 }}>
+          {title}
+        </Title>
+      )}
+
+      <div style={{ overflowX: 'auto' }}>
+        <SyntaxHighlighter
+          language={language}
+          style={dracula}
+          wrapLongLines
+          showLineNumbers
+          customStyle={{
+            borderRadius: '8px',
+            padding: '16px',
+            minWidth: '300px', // pra não colapsar no mobile
+            fontSize: '0.85rem',
+          }}
+        >
+          {code}
+        </SyntaxHighlighter>
+      </div>
+    </Card>
   );
 }

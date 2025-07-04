@@ -10,7 +10,8 @@ import {
   ImgChangeMode,
   Body,
   Grid,
-  GridButton 
+  GridButton,
+  StyledCard 
 } from './styled';
 
 import AppName from '../../components/AppName/AppName'
@@ -18,6 +19,10 @@ import AppName from '../../components/AppName/AppName'
 import ButtonsHome from '../../components/ButtonsHome'
 
 import { useTranslation } from 'react-i18next';
+
+import { Layout, Row, Col, Card } from 'antd';
+
+import { Link } from 'react-router-dom';
 
 const Home = (props) => {
 const { t } = useTranslation();
@@ -38,29 +43,49 @@ const { t } = useTranslation();
     {text: t('home_button_sentry'),
       link: '/docSentry'
     },
-    
+    {text: t('home_button_fields_examples'),
+      link: '/docFields'
+    },
+    {text: t('home_button_status_code'),
+      link: '/docStatusCode'
+    },
+    {text: t('home_button_ant_design'),
+      link: '/docAntDesign'
+    },
   ]
 
-  const handleChangeMode = (mode) => {
-    localStorage.setItem('viewMode', mode)
-  }
-
     return (
-        <Container>
+        <Layout style={{ minHeight: '100vh', padding: '24px', paddingTop: '80px' }}>
+         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+
         <ImgLogo 
           src={logoMyCodeDB}
           className="App-logo" alt="logo" />
 
+         </div>
+
+         <Row gutter={[16, 16]} justify="center">
+           {buttonsToShow.map((btn, index) => (
+         <Col xs={24} sm={12} md={8} lg={8} key={index}>
+         <Link to={btn.link}>
+
+            <StyledCard hoverable>
+               {btn.text}
+            </StyledCard>
+         </Link>
+         </Col>
+      ))}
+         </Row>
           
-          <Body >
-          {/* <ButtonsHome text={'btn.text'} key={'index'} to={'btn.link'}/> */}
+          {/* <Body >
+          
             <Grid >
               {buttonsToShow.map((btn, index) => {
                 return <ButtonsHome text={btn.text} key={index} to={btn.link}/>
               })}
             </Grid>
-          </Body>
-    </Container>
+          </Body> */}
+    </Layout>
     )
 }
 
