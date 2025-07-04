@@ -14,6 +14,7 @@ export const Body = styled.div`
     flex-direction: column;
     width: 70%;
     margin-top: 30px;
+margin-bottom: 100px;
 `
 
 export const TextExplanationConcept = styled.span`

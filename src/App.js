@@ -1,35 +1,15 @@
-import logoMyCodeDB from './assets/logoMyCodeDB.png'
-import {
-  
-  ImgChangeMode
-} from './styled';
-
-import AppName from './components/AppName/AppName'
 import { ThemeProvider } from 'styled-components';
 import { useEffect, useState } from 'react';
 import { GlobalStyle } from './styles/globalStyle';
 import { lightTheme, darkTheme } from './styles/theme';
-import Home from './pages/Home'
-
-import imgDarkMode from './assets/imgDarkMode.png'
-import imgLightMode from './assets/imgLightMode.png'
-
-import { BrowserRouter } from 'react-router-dom';
 import Routes from './Routes'
-
 import Header from './components/Header/Header';
-
-import Sidebar from './components/Sidebar'
-
+import Footer from './components/Footer/Footer'
 import ChatBot from './components/ChatBot'
-
 import { ConfigProvider, theme } from 'antd';
-
 import {getAntTheme} from './utils/antTheme';
-
 import { HashRouter as Router } from 'react-router-dom';
-
-
+import { LayoutWrapper, ContentWrapper } from './styled'
 function App() {
   const [viewMode, setViewMode] = useState('dark');
 
@@ -47,24 +27,26 @@ setViewMode(mode)
   // const toggleTheme = () => setIsDarkMode(prev => !prev);
 
   return (
-    <ConfigProvider
-    theme={getAntTheme(viewMode) }
-  >
-     <ThemeProvider theme={viewMode == 'dark' ? darkTheme : lightTheme}>
-       <Router>
-      <GlobalStyle />
-       {/* <Sidebar /> */}
-      <Header toggleTheme={handleChangeMode} viewMode={viewMode} />
-      <ChatBot />
-      <Routes />
-         
-      {/* <Home /> */}
-       
-      </Router>
-    </ThemeProvider>
+    <ConfigProvider theme={getAntTheme(viewMode)}>
+      <ThemeProvider theme={viewMode == 'dark' ? darkTheme : lightTheme}>
+        <Router>
+          <GlobalStyle />
 
-  </ConfigProvider>
-  );
+          <LayoutWrapper>
+            <Header toggleTheme={handleChangeMode} viewMode={viewMode} />
+
+            <ContentWrapper>
+              <ChatBot />
+              <Routes />
+            </ContentWrapper>
+
+            <Footer />
+          </LayoutWrapper>
+
+        </Router>
+      </ThemeProvider>
+    </ConfigProvider>
+  )
 }
 
 export default App;
