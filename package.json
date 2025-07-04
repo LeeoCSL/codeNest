@@ -29,7 +29,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "create-branch": "node create-branch.js",
-    "cabei": "node finish-branch.js"
+    "cabei": "node finish-branch.js",
+    "merge": "node merge-branch.js"
   },
   "eslintConfig": {
     "extends": [
