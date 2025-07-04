@@ -93,7 +93,7 @@
     "status_code_text_503": "Servidor temporariamente indisponível.",
 
 
-    "home_button_ant_design": "Ant Design"
-
+    "home_button_ant_design": "Ant Design",
+    "ant_design_title":"Ant Design"
 
 }

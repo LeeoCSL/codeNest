@@ -95,3 +95,12 @@ export const StyledCard = styled(Card)`
     padding: 16px;
   }
 `;
+
+export const HeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background-color: ${({ theme }) => theme.primary};
+`;

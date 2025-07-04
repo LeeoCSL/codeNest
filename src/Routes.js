@@ -8,6 +8,7 @@ import SnippetsPage from './pages/SnippetsPage'
 import ToDosPage from './pages/ToDosPage'
 import FieldsExamples from './pages/FieldsExamples'
 import StatusCodesPage from './pages/StatusCodesPage'
+import AntDesignPage from './pages/AntDesignPage'
 
 
 export default function AppRoutes() {
@@ -22,6 +23,7 @@ export default function AppRoutes() {
       <Route path="/TODOs" element={<ToDosPage />} />
       <Route path="/docFields" element={<FieldsExamples />} />
       <Route path="/docStatusCode" element={<StatusCodesPage />} />
+      <Route path="/docAntDesign" element={<AntDesignPage />} />
     </Routes>
   );
 }

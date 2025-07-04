@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const DropdownWrapper = styled.div`
   position: relative;
   margin-left: 20px;
+  width: 100px;
 `;
 
 export const DropdownButton = styled.button`
