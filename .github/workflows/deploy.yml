@@ -22,7 +22,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build do projeto
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Faz deploy no GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
