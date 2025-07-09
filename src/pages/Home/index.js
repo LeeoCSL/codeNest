@@ -52,6 +52,10 @@ const { t } = useTranslation();
     {text: t('home_button_ant_design'),
       link: '/docAntDesign'
     },
+     {text: 'SUB-PROJECTS',
+      link: '/nlwIniciante'
+      // link: '/subProjects'
+    },
   ]
 
     return (

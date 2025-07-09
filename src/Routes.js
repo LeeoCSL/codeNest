@@ -9,6 +9,9 @@ import ToDosPage from './pages/ToDosPage'
 import FieldsExamples from './pages/FieldsExamples'
 import StatusCodesPage from './pages/StatusCodesPage'
 import AntDesignPage from './pages/AntDesignPage'
+import NLW from './pages/subProjects/NLW'
+import NLWIniciante from './pages/subProjects/NLWIniciante'
+import NLWAvancado from './pages/subProjects/NLWAvancado'
 
 
 export default function AppRoutes() {
@@ -24,6 +27,9 @@ export default function AppRoutes() {
       <Route path="/docFields" element={<FieldsExamples />} />
       <Route path="/docStatusCode" element={<StatusCodesPage />} />
       <Route path="/docAntDesign" element={<AntDesignPage />} />
+      <Route path="/subProjects" element={<NLW />} />
+      <Route path="/nlwIniciante" element={<NLWIniciante />} />
+      <Route path="/nlwAvancado" element={<NLWAvancado />} />
     </Routes>
   );
 }
