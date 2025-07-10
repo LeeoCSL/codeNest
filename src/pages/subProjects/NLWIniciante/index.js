@@ -47,7 +47,10 @@ const markdownToHTML = (text) => {
  const model  = "gemini-2.5-flash"
     const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
 
-    const pergunta = `
+     let pergunta = ''
+
+    if(gameSelect == 'league of legends'){
+     pergunta = `
         ## Especialidade
         Você é um especialista assistente de meta para o jogo ${gameSelect}
 
@@ -74,7 +77,68 @@ const markdownToHTML = (text) => {
         ---
         Aqui está a pergunta do usuário: ${questionInput}
 
-    `
+        `
+    }else if(gameSelect =='Clair Obscur: Expedition 33'){
+        pergunta = `
+         ## Especialidade
+        Você é um especialista assistente de meta para o jogo ${gameSelect}
+
+        ## Tarefa
+        Você deve responder as perguntas do usuário com base no seu conhecimento do jogo, estratégias, builds e dicas entregando uma instrução completa e detalhada
+
+        ## Regras
+        - Se você não sabe a resposta, responda com 'Não sei' e nao tente inventar uma resposta.
+        - Se a pergunta nao esta relacionada ao jogo, responda com 'Essa pergunta não está relacionada ao jogo'
+        - Considere a data atual ${new Date().toLocaleDateString()}
+        - Faça pesquisas atualizadas, baseado na data atual, para dar uma resposta coerente.
+        - Nunca responda itens que você não tenha certeza de que existe no patch atual.
+        - No caso de itens, diga a ordem de cada
+
+        ## Resposta
+        - Economize na resposta, seja direto e responda no maximo 3000 caracteres
+        - Responda em markdown
+        - Não precisa fazer nenhuma saudação ou despedida, apenas responda o que o usuário esta querendo.
+
+        ## Exemplo de resposta
+        pergunta do usuário: Melhor build early game
+        resposta: no early game foque nos itens \n\n**itens*:* coloque os itens aqui.  e priorize as skils \n\n**skilss**lista de skills\n\n
+
+        ---
+        Aqui está a pergunta do usuário: ${questionInput}
+
+        `
+
+    }else if(gameSelect == 'tft'){
+        pergunta = `
+        ## Especialidade
+        Você é um especialista assistente de meta para o jogo ${gameSelect}
+
+        ## Tarefa
+        Você deve responder as perguntas do usuário com base no seu conhecimento do jogo, estratégias, builds e dicas
+
+        ## Regras
+        - Se você não sabe a resposta, responda com 'Não sei' e nao tente inventar uma resposta.
+        - Se a pergunta nao esta relacionada ao jogo, responda com 'Essa pergunta não está relacionada ao jogo'
+        - Considere a data atual ${new Date().toLocaleDateString()}
+        - Faça pesquisas atualizadas sobre o patch atual, baseado na data atual, para dar uma resposta coerente.
+        - Nunca responda itens que você não tenha certeza de que existe no patch atual.
+        - No caso de itens, diga a ordem de cada
+
+        ## Resposta
+        - Economize na resposta, seja direto e responda no maximo 1000 caracteres
+        - Responda em markdown
+        - Não precisa fazer nenhuma saudação ou despedida, apenas responda o que o usuário esta querendo.
+
+        ## Exemplo de resposta
+        pergunta do usuário: Melhor build exotec
+        resposta: A build mais atual é \n\n **Personagens**\n\nlista de personagens\n\n **Itens:**\n\n coloque os itens aqui. \n\n**aprimoramentos**:lista de aprimoramentos\n\n
+
+
+        ---
+        Aqui está a pergunta do usuário: ${questionInput}
+
+        `
+    }
     const contents = [{
         role:"user",
         parts:[{
@@ -108,6 +172,7 @@ const markdownToHTML = (text) => {
         console.log('42 aqui', apiKey, gameSelect, questionInput)
         askButton.classList.add('loading')
         setButtonDisabled(true)
+        setAiResponse('')
 
            try {
         //perguntar para a IA
@@ -122,6 +187,8 @@ const markdownToHTML = (text) => {
         console.log(error)
 
     } finally {
+        askButton.classList.remove('loading')
+        setButtonDisabled(false)
         // askButton.disabled = false
         // askButton.textContent= 'Perguntar'
         // askButton.classList.remove('loading')
@@ -159,9 +226,9 @@ const { t } = useTranslation();
                             <Select id="gameSelect"
                             onChange={(e) => setGameSelect(e.target.value)}>
                                 <option value="">Selecione um jogo</option>
-                                <option value="valorant">Valorant</option>
+                                <option value="Clair Obscur: Expedition 33">Clair Obscur: Expedition 33</option>
                                 <option value="league of legends">League of Legends</option>
-                                <option value="csgo">CS:GO</option>
+                                <option value="tft">TFT</option>
                             </Select>
 
                             <Input id="questionInput" type="text" placeholder="Ex: Melhor build para ADC..."
